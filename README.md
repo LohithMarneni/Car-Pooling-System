@@ -32,27 +32,26 @@ A full-stack ride-sharing platform built using the MERN stack (MongoDB, Express.
 ![Alt Text](images/Accept_or_Reject.png)
 
 - Add vehicle details and ride preferences (e.g., music, smoking, pet policy).
-![Alt Text](images/Register.png)
+
 
 ### Rider Features
 - Search rides based on pickup, drop, and date.
-![Alt Text](images/Search_Ride.png)
+<!-- ![Alt Text](images/Search_Ride.png) -->
 
 - Request to join rides and track request status.
-![Alt Text](images/Driver_Dashboard.png)
+<!-- ![Alt Text](images/Driver_Dashboard.png) -->
 
 ### Ride Matching & Management
 - Intelligent matching using pickup, drop, timing, and preferences.
 - Avoids duplicate or unauthorized ride requests.
 - Manages seat count and ride lifecycle.
 - Calculates route match percentage to help users make better decisions.
-![Alt Text](images/Rider_Profile_Edit.png)
 
 
 ### Additional Key Features
 - Emergency contact integration per user profile.
 - Real-time dashboard for driver request approvals.
-![Alt Text](images/Rider_Profile_Update.png)
+![Alt Text](images/postman.png)
 ## Tech Stack
 
 ### Frontend
