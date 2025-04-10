@@ -136,7 +136,7 @@ This project is a submission for the MoveInSync recruitment assignment.
 | Caching                | Redis/memory caching scope defined for ride searches                |
 | Error Handling         | Global and route-specific error handling with status codes          |
 
-For a detailed project report/documentation, refer to **CarpoolingSystem_Report.pdf** (attached separately).
+For a detailed project report/documentation, refer to **CarpoolingSystem_Report.pdf** inside images (attached separately).
 
 
    
