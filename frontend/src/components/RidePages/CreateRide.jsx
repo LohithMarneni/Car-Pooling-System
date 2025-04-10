@@ -74,7 +74,7 @@ function CreateRide() {
             required
           />
         ))}
-        <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        <button className="w-full bg-black text-white py-2 rounded hover:bg-black">
           Create Ride
         </button>
       </form>

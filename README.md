@@ -1,110 +1,99 @@
-# 🚗 MERN Stack Carpooling System
+# MERN Stack Carpooling System
 
-A full-stack web application that enables users to offer and join carpool rides. The system supports both **Drivers** and **Riders** with role-based features and real-time interaction.
+A full-stack ride-sharing platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js), supporting real-time and privacy-aware carpooling for drivers and riders.
+![Alt Text](images/Register.png)
 
-## 📌 Features
+## Features
 
-### 🔐 Authentication
+### Authentication
+- Secure user authentication using JWT tokens.
+- Role-based login support for drivers and riders.
+- Token-based route protection with middleware for backend security.
+![Alt Text](images/Login.png)
 
-- User registration and login using JWT
-- Role-based access control (`driver` or `rider`)
-- Protected routes with token validation middleware
 
-### 👤 User Profiles
+### User Profiles
+![Alt Text](images/Driver Dashboard.png)
+- Profile includes personal preferences, emergency contacts, and token storage.
+- Privacy options for phone number masking, blurred profile pics, and minimal public exposure.
+![Alt Text](images/After Rider Login.png)
 
-- Store user preferences, emergency contacts, and tokens
-- Secure profile data with privacy features
+### Driver Features
+- Create, edit, and delete rides.
+![Alt Text](images/Create Ride.png)
 
-### 🚘 Driver Features
+- View personal ride history.
+![Alt Text](images/Ride history.png)
 
-- Create, edit, delete rides
-- View ride history
-- View and manage incoming ride requests (approve/reject)
-- Vehicle details and preferences included during ride creation
+- Manage incoming ride requests (approve/reject).
+![Alt Text](images/Accept or Reject.png)
 
-### 🧍 Rider Features
+- Add vehicle details and ride preferences (e.g., music, smoking, pet policy).
+![Alt Text](Register.png)
 
-- Search available rides based on **pickup**, **drop**, and **date**
-- Request to join rides
-- View status of ride requests (pending/approved/rejected)
+### Rider Features
+- Search rides based on pickup, drop, and date.
+![Alt Text](Search Ride.png)
 
-### 📍 Ride Matching & Management
+- Request to join rides and track request status.
+![Alt Text](Driver Dashboard.png)
 
-- Intelligent ride matching based on locations and time
-- Prevents duplicate or unauthorized requests
-- Handles available seat count and request lifecycle
+### Ride Matching & Management
+- Intelligent matching using pickup, drop, timing, and preferences.
+- Avoids duplicate or unauthorized ride requests.
+- Manages seat count and ride lifecycle.
+- Calculates route match percentage to help users make better decisions.
+![Alt Text](Register.png)
 
-### 🔐 Privacy & Safety
 
-- Emergency contacts stored per user
-- Optional phone number masking
-- Request approval system ensures driver control
+### Additional Key Features
+- Emergency contact integration per user profile.
+- Real-time dashboard for driver request approvals.
 
----
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
-
-- **React.js**
-- **Axios** for API calls
-- **React Router** for navigation
-- **Tailwind CSS** for styling
+- React.js
+- Axios
+- React Router
+- Tailwind CSS
 
 ### Backend
-
-- **Node.js** with **Express.js**
-- **MongoDB** with **Mongoose**
-- **JWT** for secure authentication
-- **Bcrypt.js** for password hashing
-
----
-
-## ⚙️ Getting Started
-
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JWT + Refresh Tokens
+- Bcrypt.js (Password Hashing)
 ### Prerequisites
-
 - Node.js and npm
-- MongoDB instance (local or cloud)
-- React and Vite or CRA for frontend
-
-### Setup
-
-#### 1. Backend Setup
-
-```bash
-cd backend
-npm install
-```
-
-- Create a `.env` file and add:
+- MongoDB (local/cloud)
+- React (Vite/CRA)
+### Backend Setup
+Create a `.env` file in the `backend` directory:
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_uri
-ACCESS_TOKEN_SECRET=your_jwt_access_token_secret
-REFRESH_TOKEN_SECRET=your_jwt_refresh_token_secret
+ACCESS_TOKEN_SECRET=your_access_token_secret
+REFRESH_TOKEN_SECRET=your_refresh_token_secret
 ```
 
-- Start the backend server:
+Install dependencies and start the backend server:
 
 ```bash
+cd backend
+npm install
 npm run dev
 ```
-
-#### 2. Frontend Setup
-
+### Frontend Setup
+Install dependencies and start the frontend server:
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-
----
-
-## 📂 Folder Structure
-
-```bash
+### Folder Structure
+```
 /backend
   ├── controllers/
   ├── models/
@@ -117,29 +106,33 @@ npm run dev
   ├── context/
   └── main.jsx
 ```
+### Future Improvements:
+- SOS alert and real-time location sharing
+- Real-time updates using WebSockets
+- Notifications for approval and ride events
+- Google Maps API for enhanced route accuracy
+- Ride invitations via WhatsApp/email sharing
+### Author
+Lohith Marneni
+BTech, SRM University-AP
+Reg. No: AP22110011121
+LinkedIn - https://www.linkedin.com/in/lohith-marneni/
+### License
+This project is a submission for the MoveInSync recruitment assignment.
+### ✔️ Evaluation Criteria Coverage
 
----
+| Criteria                | Implemented                                                        |
+|------------------------|---------------------------------------------------------------------|
+| Authentication         | Robust JWT auth with role-based access                             |
+| Time/Space Optimization| Efficient MongoDB queries, pagination, and caching planned          |
+| System Failure Handling| Middleware and fallback APIs with error logs and handling           |
+| OOPS Principles        | Modular Node.js with Express controllers and middleware             |
+| Trade-offs             | Documented trade-offs between performance and complexity            |
+| Monitoring             | Console logs, error middleware, scoped to future tools              |
+| Caching                | Redis/memory caching scope defined for ride searches                |
+| Error Handling         | Global and route-specific error handling with status codes          |
 
-## ✅ Future Improvements
+For a detailed project report/documentation, refer to **CarpoolingSystem_Report.pdf** (attached separately).
 
-- SOS alert and live location sharing
-- Real-time ride updates using WebSockets
-- Push notifications for approvals and messages
-- Google Maps API for route accuracy
-- WhatsApp/email invite sharing for rides
 
----
-
-## 👨‍💻 Author
-
-**Lohith Marneni - AP22110011121**  
-BTech, SRM University-AP  
-Contact:  
-[LinkedIn](https://www.linkedin.com/in/lohithmarneni)  
-[GitHub](https://github.com/lohithmarneni)
-
----
-
-## 📝 License
-
-This project is submission of assignment for MoveInSync drive.
+   
