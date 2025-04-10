@@ -13,30 +13,33 @@ A full-stack ride-sharing platform built using the MERN stack (MongoDB, Express.
 
 
 ### User Profiles
-![Alt Text](images/Driver Dashboard.png)
+![Alt Text](images/Driver_Dashboard.png)
+
 - Profile includes personal preferences, emergency contacts, and token storage.
 - Privacy options for phone number masking, blurred profile pics, and minimal public exposure.
-![Alt Text](images/After Rider Login.png)
+![Alt Text](images/After_Rider_Login.png)
 
 ### Driver Features
 - Create, edit, and delete rides.
-![Alt Text](images/Create Ride.png)
+
+![Alt Text](images/Create_Ride.png)
 
 - View personal ride history.
-![Alt Text](images/Ride history.png)
+
+![Alt Text](images/Ride_history.png)
 
 - Manage incoming ride requests (approve/reject).
-![Alt Text](images/Accept or Reject.png)
+![Alt Text](images/Accept_or_Reject.png)
 
 - Add vehicle details and ride preferences (e.g., music, smoking, pet policy).
 ![Alt Text](Register.png)
 
 ### Rider Features
 - Search rides based on pickup, drop, and date.
-![Alt Text](Search Ride.png)
+![Alt Text](Search_Ride.png)
 
 - Request to join rides and track request status.
-![Alt Text](Driver Dashboard.png)
+![Alt Text](Driver_Dashboard.png)
 
 ### Ride Matching & Management
 - Intelligent matching using pickup, drop, timing, and preferences.
