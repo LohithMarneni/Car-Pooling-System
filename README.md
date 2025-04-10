@@ -51,7 +51,9 @@ A full-stack ride-sharing platform built using the MERN stack (MongoDB, Express.
 ### Additional Key Features
 - Emergency contact integration per user profile.
 - Real-time dashboard for driver request approvals.
+
 ![Alt Text](images/postman.png)
+
 ## Tech Stack
 
 ### Frontend
