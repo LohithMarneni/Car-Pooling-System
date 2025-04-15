@@ -26,6 +26,21 @@ const searchRides = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+//haversine formula based approach tried 
+//a = sin^2(Δφ / 2) + cos(φ₁) ⋅ cos(φ₂) ⋅ sin^2(Δλ / 2)
+// φ₁ and φ₂ are the latitudes of the two points (in radians),
+// Δφ is the difference between the latitudes: φ₂ - φ₁,
+// Δλ is the difference between the longitudes: λ₂ - λ₁.
+// c = 2 ⋅ atan2(√a, √(1 − a))
+// d=r*c final distance between 2 points
+// Pickup Distance	Drop Distance	Match Percentage	Meaning
+// < 2 km	< 2 km	100%	Rider is very close to driver's route at both ends
+// < 2 km	< 5 km	75%	One end is very close, the other is reasonably close
+// < 5 km	< 2 km	75%	Same as above but swapped ends
+// < 10 km	< 10 km	50%	Rider and driver are in the general area but not super close
+// > 10 km	> 10 km	0% (not included)	Not a good match — rider is too far off the driver's route
+// This c represents the angular distance in radians between the two points.
 // const getCoordinates = async (address) => {
 //   const encoded = encodeURIComponent(address);
 //   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encoded}&key=${GOOGLE_MAPS_API_KEY}`;
